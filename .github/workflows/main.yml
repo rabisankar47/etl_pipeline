@@ -8,35 +8,35 @@ jobs:
           runs-on: ubuntu-latest
           steps:
           - name: print message
-          run: echo 'This is job1'
+            run: echo 'This is job1'
 
      job2:
           runs-on: ubuntu-latest
           needs: job1
           steps:
           - name: print message
-          run: echo 'This is job2'
+            run: echo 'This is job2'
 
      job3:
           runs-on: ubuntu-latest
           needs: job1
           steps:
           - name: print message
-          run: echo 'This is job3'
+            run: echo 'This is job3'
 
      job4:
           runs-on: ubuntu-latest
           needs: job2
           steps:
           - name: print message
-          run: echo 'This is job4'
+            run: echo 'This is job4'
 
      job5:
           runs-on: ubuntu-latest
           needs: job3
           steps:
           - name: print message
-          run: echo 'This is job5'
+            run: echo 'This is job5'
 
 
      job6:
@@ -44,4 +44,4 @@ jobs:
           needs: [job4, job5]
           steps:
           - name: print message
-          run: echo 'This is job6'
+            run: echo 'This is job6'
